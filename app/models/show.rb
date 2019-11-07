@@ -1,3 +1,4 @@
+require "pry"
 class Show < ActiveRecord::Base 
   
   def self.highest_rating
@@ -8,6 +9,7 @@ class Show < ActiveRecord::Base
     high_num = Show.highest_rating
     show = Show.where("rating = ?", high_num)
     show
+    binding.pry
   end
   
 end
